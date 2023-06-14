@@ -3,9 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>后台主页</title>
+  <!-- 导入 layui 样式表 -->
+  <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+  <!-- 导入 iconfont 样式表 -->
+  <link rel="stylesheet" href="./assets/iconfont/iconfont.css">
+  <!-- 导入 index.css 样式表 -->
+  <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 <body>
-  
+  <div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+      <div class="logo">
+        <img src="./assets/images/logo.png" alt="">
+      </div>
+      <ul class="layui-nav layui-layout-right">
+        <!-- <li class="layui-logo layui-hide-xs layui-bg-black"></li> -->
+        <li class="layui-nav-item layui-hide layui-show-sm-inline-block">
+          <a href="javascript:;">
+            <img src="//unpkg.com/outeres@0.0.10/img/layui/icon-v2.png" class="layui-nav-img">
+          </a>
+          <dl class="layui-nav-child">
+            <dd><a href="javascript:;">Your Profile</a></dd>
+            <dd><a href="javascript:;">Settings</a></dd>
+            <dd><a href="javascript:;">Sign out</a></dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+    <div class="layui-side layui-bg-black">
+      <div class="layui-side-scroll">
+        <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+        <ul class="layui-nav layui-nav-tree" lay-shrink="all">
+          <li class="user" lay-unselect>
+            <a href="javascript:;">
+              <img src="/assets/images/sample.jpg" class="layui-nav-img user_pic">
+              <span id="head_pic">A</span>
+              <span class="user_name">用户名</span>
+            </a>
+          </li>
+          <li class="layui-nav-item layui-nav-itemed layui-this" lay-unselect>
+            <a class="" href="/home/dashboard.html" target="iframe">主页</a>
+          </li>
+          <li class="layui-nav-item">
+            <a href="javascript:;">文章管理</a>
+            <dl class="layui-nav-child">
+              <dd><a href="javascript:;">文章类别</a></dd>
+              <dd><a href="javascript:;">文章列表</a></dd>
+              <dd><a href="javascript:;">发布文章</a></dd>
+            </dl>
+          </li>
+          <li class="layui-nav-item">
+            <a href="javascript:;">个人中心</a>
+            <dl class="layui-nav-child">
+              <dd><a href="javascript:;">基本资料</a></dd>
+              <dd><a href="javascript:;">更换头像</a></dd>
+              <dd><a href="javascript:;">重置密码</a></dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="layui-body">
+      <!-- 内容主体区域 -->
+      <!-- <div style="padding: 15px;">
+        <div class="layui-card layui-panel">
+          <div class="layui-card-header"></div>
+          <div class="layui-card-body"></div>
+        </div>
+      </div> -->
+      <iframe name="iframe" src="/home/dashboard.html" frameborder="0"></iframe>
+    </div>
+    <div class="layui-footer">
+      <!-- 底部固定区域 -->
+      https://dashijian.com - 大事件
+    </div>
+  </div>
+  <script src="./assets/lib/layui/layui.all.js"></script>
 </body>
 </html>
